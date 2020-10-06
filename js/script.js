@@ -40,6 +40,7 @@ function dispaly(){
 		newbook.appendChild(pagesdiv);
 		newbook.appendChild(readdiv);
 
+
 		
 	}
 }
