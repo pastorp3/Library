@@ -72,10 +72,10 @@ class Library {
 
   read(event) {
     const index = event.target.value;
-    if(this.myLibrary[index].status === false){
+    if (this.myLibrary[index].status === false) {
       this.myLibrary[index].status = true;
       event.target.textContent = 'No Read';
-    }else{
+    } else {
       this.myLibrary[index].status = false;
       event.target.textContent = 'Read';
     }
@@ -108,5 +108,4 @@ const form = document.getElementsByTagName('form')[0];
 const input = document.getElementsByClassName('input');
 let formOn = 0;
 let booknum = 0;
-let read = 'no';
 addBook.addEventListener('click', add);
