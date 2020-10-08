@@ -17,7 +17,8 @@ The user can mark a book as read or they can delete it from the list completely.
 
 [Live Demo Link](https://raw.githack.com/pastorp3/Library/feature/index.html)
 
-##Setup Local
+## Setup Local
+
 Clone the repo with the next command in your terminal:
 
 ```
