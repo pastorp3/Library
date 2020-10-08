@@ -28,7 +28,7 @@ class Library {
     this.myLibrary[index].status = true;
     event.target.setAttribute('class', 'hidde-form');
   }
-  
+
   addBookToLibrary(book) {
     this.myLibrary.push(book);
     this.viewBooks();
