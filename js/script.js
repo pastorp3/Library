@@ -1,22 +1,28 @@
+/* eslint-disable no-use-before-define, max-classes-per-file */
+
 class Library {
   constructor() {
     this.myLibrary = [];
     this.cards = document.getElementById('lib-container');
   }
+
   showLibrary() {
     return this.myLibrary;
   }
+
   viewBooks() {
     this.clearCards();
     for (let i = 0; i < this.myLibrary.length; i += 1) {
       this.renderCard(this.myLibrary[i], i);
     }
   }
+
   deleteBook(event) {
     const index = event.target.value;
     this.myLibrary.splice(index, 1);
     this.viewBooks();
   }
+
   readBook(event) {
     const index = event.target.value;
     this.myLibrary[index].status = true;
@@ -26,11 +32,13 @@ class Library {
     this.myLibrary.push(book);
     this.viewBooks();
   }
+
   clearCards() {
     while (this.cards.firstChild) {
       this.cards.removeChild(this.cards.firstChild);
     }
   }
+
   renderCard(book, index) {
     const divCard = document.createElement('div');
     divCard.setAttribute('class', 'book-card');
@@ -54,11 +62,13 @@ class Library {
     b2.setAttribute('value', index);
     divCard.append(h2, h3, p, b1, b2);
   }
+
   deleteCard(event) {
     const index = event.target.value;
     this.myLibrary.splice(index, 1);
     this.viewBooks();
   }
+
   read(event) {
     const index = event.target.value;
     this.myLibrary[index].status = true;
@@ -75,11 +85,11 @@ class Book {
 }
 
 function add() {
-  if (formOn == 0) {
+  if (formOn === 0) {
     form.classList.toggle('hidde-form');
     formOn = 1;
   } else {
-    let book = new Book(input[0].value, input[1].value, input[2].value, booknum);
+    const book = new Book(input[0].value, input[1].value, input[2].value, booknum);
     form.classList.toggle('hidde-form');
     library.addBookToLibrary(book);
     formOn = 0;
