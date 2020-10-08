@@ -72,8 +72,13 @@ class Library {
 
   read(event) {
     const index = event.target.value;
-    this.myLibrary[index].status = true;
-    event.target.setAttribute('class', 'hidde-form');
+    if(this.myLibrary[index].status === false){
+      this.myLibrary[index].status = true;
+      event.target.textContent = 'No Read';
+    }else{
+      this.myLibrary[index].status = false;
+      event.target.textContent = 'Read';
+    }
   }
 }
 class Book {
@@ -82,6 +87,7 @@ class Book {
     this.author = author;
     this.pages = pages;
     this.id = numbook;
+    this.status = false;
   }
 }
 
@@ -102,4 +108,5 @@ const form = document.getElementsByTagName('form')[0];
 const input = document.getElementsByClassName('input');
 let formOn = 0;
 let booknum = 0;
+let read = 'no';
 addBook.addEventListener('click', add);
