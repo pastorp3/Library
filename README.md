@@ -15,7 +15,7 @@ The user can mark a book as read or they can delete it from the list completely.
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/pastorp3/Library/feature/index.html)
+[Live Demo Link](https://rawcdn.githack.com/pastorp3/Library/8eb8b98c4ffdbe70836adad43e396204007a20d5/index.html)
 
 ## Setup Local
 
