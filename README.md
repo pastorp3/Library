@@ -17,7 +17,14 @@ The user can mark a book as read or they can delete it from the list completely.
 
 [Live Demo Link](https://raw.githack.com/pastorp3/Library/feature/index.html)
 
+##Setup Local
+Clone the repo with the next command in your terminal:
 
+```
+git clone https://github.com/pastorp3/Library.git
+```
+
+Open the project folder and open the index.html file in your favorite browser.
 ## Authors
 
 👤 **José Pedraza**
